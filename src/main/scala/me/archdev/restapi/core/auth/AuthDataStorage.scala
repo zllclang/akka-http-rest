@@ -2,7 +2,6 @@ package me.archdev.restapi.core.auth
 
 import me.archdev.restapi.core.AuthData
 import me.archdev.restapi.utils.db.DatabaseConnector
-import me.archdev.restapi.core.profiles.UserProfileStorage
 
 import scala.concurrent.{ ExecutionContext, Future }
 

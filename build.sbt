@@ -23,6 +23,9 @@ libraryDependencies ++= {
     // Postgres driver
     "org.postgresql" % "postgresql" % "42.1.4",
 
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    "mysql" % "mysql-connector-java" % "5.1.47",
+
     // Migration for SQL databases
     "org.flywaydb" % "flyway-core" % "4.2.0",
 

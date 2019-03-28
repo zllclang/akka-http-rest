@@ -14,17 +14,17 @@ import scala.concurrent.ExecutionContext
 object Boot extends App {
 
   def startApplication() = {
-    implicit val actorSystem                     = ActorSystem()
+    implicit val actorSystem: ActorSystem        = ActorSystem()
     implicit val executor: ExecutionContext      = actorSystem.dispatcher
     implicit val materializer: ActorMaterializer = ActorMaterializer()
 
     val config = Config.load()
 
-    new DatabaseMigrationManager(
-      config.database.jdbcUrl,
-      config.database.username,
-      config.database.password
-    ).migrateDatabaseSchema()
+//    new DatabaseMigrationManager(
+//      config.database.jdbcUrl,
+//      config.database.username,
+//      config.database.password
+//    ).migrateDatabaseSchema()
 
     val databaseConnector = new DatabaseConnector(
       config.database.jdbcUrl,
